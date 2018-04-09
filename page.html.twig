@@ -1,0 +1,14 @@
+<div class="jqGrid_wrapper">
+      <table id="extranet_program_detail_grid_lot"></table>
+      <div id="pager_extranet_program_detail_grid_lot"></div>
+</div>
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        $(document).ready(function () {
+            {{ jqGridLot | raw }}
+        });
+    </script>
+
+{% endblock %}
