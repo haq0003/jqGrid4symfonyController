@@ -71,6 +71,8 @@ class LotRepository extends ServiceEntityRepository
         if ($sidx && $sord) {
             $qb->orderby($sidx, $sord);
         }
+        $qb->setFirstResult($pagination['borneInf']);
+        $qb->setMaxResults($pagination['intervalle']);
 
         // warning order is important
         // getQuery must be call before setHint !
